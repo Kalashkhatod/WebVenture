@@ -105,6 +105,44 @@
           font-style: initial;
         }
 
+        .nav3{
+          background-color: #2582e0;
+          padding: 10px;
+        }
+        .nav3 ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .nav3 a {
+          text-decoration: none;
+          display: block;
+          color: #343a40;
+          padding: 10px;
+        }
+        .nav3 a:hover  {
+          background-color: aqua;
+          border-radius: 10px;
+        }
+        
+        .nav3 .dropdown-content{
+          display: none;
+        }
+
+
+        .nav3 .dropdown:hover .dropdown-content{
+          display: block;
+          position: absolute;
+          background-color: aliceblue;
+          border-radius: 10px;
+          min-width: 150px;
+        }
+
+        
+
     </style>
 </head>
 <body>
@@ -140,8 +178,14 @@
       <nav class="nav3">
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Products</a></li>
+        <li class="dropdown"><a href="#">About</a>
+        <div class="dropdown-content">
+          <a href="">Our Story</a>
+          <a href="">Team</a>
+          <a href="">Contact</a>
+        </div>
+        </li>
+        <li><a href="">Products</a></li>
         <li><button class="login-btn">Login</button></li>
       </ul>
       </nav>
