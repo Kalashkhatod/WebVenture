@@ -48,12 +48,95 @@ input[type="email"]{
     margin-bottom: 1rem;
 }
 
-button{
+/* button{
     background-color: #a53040;
     color: white;
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s cubic-bezier(0.6, 0.1, 0.6, 1),
+                box-shadow 0.35s cubic-bezier(0.2, 0.1, 0.6, 1);
+    box-shadow: 0px 3px 10px rgba(243, 71, 71, 0.9);
 }
+
+button:hover{
+    background-color: #333;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
+} */
+
+button {
+  position: relative;
+  background-color: #a53040;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 3px 10px rgba(243, 71, 71, 0.9);
+  overflow: visible; /* allow drips outside */
+}
+
+button:hover {
+  background-color: #333;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* Drip line across button bottom */
+button::before {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* just below button */
+  width: 100%;
+  left: 0;
+  height: 6px;
+  background: #a53040;
+  border-radius: 0 0 50% 50%;
+  opacity: 0;
+}
+
+/* Multiple dripping drops */
+button::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 190px;
+  width: 10px;
+  height: 10px;
+  background: #a53040;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+/* Animate on hover */
+button:hover::before {
+  opacity: 1;
+  animation: dripLine 0.8s ease forwards;
+}
+
+button:hover::after {
+  opacity: 1;
+  animation: dripDrop 1.3s ease forwards;
+}
+
+button::before,
+button::after {
+  pointer-events: none;  /* don’t block hover on the button itself */
+}
+
+/* Line animation (bleeding line under button) */
+@keyframes dripLine {
+  0% { height: 10px; opacity: 0; }
+  50% { height: 3px; opacity: 1; }
+  100% { height: 0; opacity: 1; }
+}
+
+/* Drop falling animation */
+@keyframes dripDrop {
+  0%   { bottom: -10px; opacity: 1; }
+  60%  { bottom: -30px; opacity: 1; }
+  100% { bottom: -50px; opacity: 0; }
+}
+
 
