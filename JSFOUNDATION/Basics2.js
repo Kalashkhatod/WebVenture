@@ -184,3 +184,34 @@ auto(n) {
 const objj = new func
 console.log(objj.auto(7));
 
+
+//IMP
+// __proto__ in js
+
+let ak = {
+  name1: "kalash",
+  age: 20,
+  run: ()=>{
+    alert("self run")
+  }
+}
+
+let p1 = {
+  run: ()=>{
+    alert("Proto1 run")
+  }
+}
+
+ak.__proto__ = p1
+
+let p2 = {
+  name2: "Himanshu",
+  run: ()=>{
+    alert("proto2 run")
+  }
+}
+p1.__proto__ = p2
+ak.run()
+console.log(ak.name2);
+
+
