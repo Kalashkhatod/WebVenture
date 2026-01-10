@@ -39,16 +39,25 @@ const fs = require("fs");
 
 // Recommended to read big files
 
-const readStream = fs.createReadStream("hello.txt","utf-8");
-readStream.on('data', (chunk)=>{
-console.log(chunk);
-});
+// const readStream = fs.createReadStream("hello.txt","utf-8");
+// readStream.on('data', (chunk)=>{
+// console.log(chunk);
+// });
 
 
-readStream.on('end',()=>{
-    console.log("Reading Completed");
-})
+// readStream.on('end',()=>{
+//     console.log("Reading Completed");
+// })
 
-const writeStream = fs.createWriteStream("hello.txt","utf-8");
+// const writeStream = fs.createWriteStream("hello.txt","utf-8");
 
-writeStream.write("to Nodejs"); //Deletes previous text
+// writeStream.write("to Nodejs"); //Deletes previous text
+
+// pipe
+const readStream = fs.createReadStream("hello.txt");
+
+const writeStream = fs.createWriteStream("hello1.txt");
+
+writeStream.write("Goat\n");
+
+readStream.pipe(writeStream);

@@ -1,4 +1,5 @@
-const Emitter = require("./emitter");
+// const Emitter = require("./emitter"); // My custom module 
+const Emitter = require("events"); // in-built module (core nodejs module) //Same result
 const emittr = new Emitter();
 
 const obj = require("./config").events;
