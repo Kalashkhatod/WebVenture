@@ -34,7 +34,7 @@ const server = http.createServer((req, res) => {
 });
 
 
-// ---------- HELPERS ----------
+  // ---------- HELPERS ----------
 function serveHTML(fileName, res) {
   const filePath = path.join(__dirname, "pages", fileName); //__dirname = folder where server.js is
   const html = fs.readFileSync(filePath);
