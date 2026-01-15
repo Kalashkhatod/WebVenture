@@ -63,7 +63,7 @@ document.querySelector('#sports').addEventListener("click", function(e){
        const target = e.target;
         if (!target.matches('li')) return; //Prevents printing 'sports is clicked'
         console.log(e.target.getAttribute('id') +' '+ 'is clicked');
-
+        
         if(target.matches('li')){
             target.style.backgroundColor = 'lightgrey'
         }
