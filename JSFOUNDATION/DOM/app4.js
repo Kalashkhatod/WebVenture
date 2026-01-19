@@ -67,7 +67,7 @@ document.querySelector('#sports').addEventListener("click", function(e){
         if(target.matches('li')){
             target.style.backgroundColor = 'lightgrey'
         }
-    }
+     }
 ) 
 
 const sports = document.querySelector('#sports');
