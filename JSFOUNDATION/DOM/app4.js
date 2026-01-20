@@ -75,4 +75,4 @@ const newSport = document.createElement('li');
 
 newSport.innerText = 'Cricket';
 newSport.setAttribute('id', 'Cricket');
-sports.appendChild(newSport);
+sports.appendChild(newSport); 
