@@ -1,3 +1,3 @@
-const about = document.getElementById("about").addEventListener('click', ()=>{
+// const about = document.getElementById("about").addEventListener('click', ()=>{
     
-})
+// })
