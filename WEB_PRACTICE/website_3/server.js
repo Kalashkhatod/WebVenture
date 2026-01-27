@@ -53,7 +53,7 @@ const server = http.createServer((req, res) => {
     }
 
     // 404
-    else {
+    else{
         res.writeHead(404);
         res.end("Not Found");
     }
