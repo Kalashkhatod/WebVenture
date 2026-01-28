@@ -52,7 +52,7 @@ const server = http.createServer((req, res) => {
         });
     }
 
-    // 404
+    // error 404
     else{
         res.writeHead(404);
         res.end("Not Found");
