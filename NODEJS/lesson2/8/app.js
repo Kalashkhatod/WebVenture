@@ -46,7 +46,7 @@ if(req.method === "POST" && req.url === "/submit"){
     })
     }else{
         res.writeHead(404,{'Content-Type':'application/json'});
-        res.end(JSON.stringify({success:false, message: "Not Found!"}))
+        res.end(JSON.stringify({success:false, message: "Not Found!"})) 
 
     }
 })
