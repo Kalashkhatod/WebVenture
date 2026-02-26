@@ -12,6 +12,6 @@ class Solution(object):
 
 obj = Solution()
 
-print_array = obj.smallerNumbersThanCurrent([8,2,2,1,5])
+print_array =  obj.smallerNumbersThanCurrent([8,2,2,1,5])
 
 print(print_array)
